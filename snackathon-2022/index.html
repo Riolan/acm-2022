@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- normalize -->
+ <link rel="stylesheet" href="normalize.css">
+
+ <!-- main css -->
+ <link rel="stylesheet" href="style.css">
+
+ <!-- animation -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+ <!-- MathJax example -->
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+ </script>
+ 
+ <title>Expanding Education</title>
+</head>
+<body>
+<!-- navbar -->
+ <nav class="navbar">
+  <div class="navbar-container">
+   <div class="navbar-brand">
+    <a href="#"><img src="/img/acm_logo.png" alt="ACM logo">
+    </a>
+    <!-- <a href="#">Snackathon
+    </a> -->
+   </div>
+ 
+   <ul class="navbar-nav-left">
+    <li>
+     <a href="#">About</a>
+    </li>
+    <li>
+     <a href="#">Contact</a>
+    </li>
+    <li>
+     <a href="#">FAQ</a>
+    </li>
+   </ul>
+ 
+   <ul class="navbar-nav-right">
+    <li><button class="btn">Sign in</button></li>
+    <li><button class="btn btn-cool">Join now</button></li>
+   </ul>
+ 
+   <!-- Hamburger Menu -->
+   <button type="button" class="hamburger" id="menu-btn">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+   </button>
+  </div>
+ </nav>
+
+ <!-- Mobile Menu -->
+ <div class="mobile-menu hidden" id="menu">
+  <ul>
+   <li>
+    <a href="#">About</a>
+   </li>
+   <li>
+    <a href="#">Contact</a>
+   </li>
+   <li>
+    <a href="#">FAQ</a>
+   </li>
+  </ul>
+  <div class="mobile-menu-bottom">
+   <button class="btn">Sign in</button>
+   <button class="btn btn-cool">Join now</button>
+   </div>
+ </div>
+
+ <div class="container">
+  <!-- <h1 class="animate__animated animate__fadeIn">education</h1> -->
+  <h1>education</h1>
+ </div>
+
+ <div class="title reveal">
+  <h2>question</h2>
+  <div class="title-underline reveal"></div>
+ </div>
+
+ <form class="form reveal">
+  <h4>questions</h4>
+  <div class="form-row">
+   <label for="name" class="form-label">Name</label>
+   <input type="text" placeholder="Name" id="name" class="form-input">
+  </div>
+ 
+  <div class="form-row">
+   <label for="number" class="form-label">Number</label>
+   <input type="number" id="number" class="form-input">
+  </div>
+ 
+  <div class="form-row">
+   <label for="email" class="form-label">Email</label>
+   <input type="email" id="email" class="form-input">
+   <small class="form-alert">please provide value</small>
+  </div>
+ 
+  <div class="form-row">
+   <label for="textarea" class="form-label">Textarea</label></label>
+   <textarea class="form-textarea" placeholder="Default Val">
+    </textarea>
+  </div>
+  <button class="btn btn-block">submit</button>
+ </form>
+
+ <!-- <p>
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+ </p> -->
+
+ <!-- <br>
+ <button class="btn" type="button">button</button>
+ <button class="btn btn-cool" type="button">cool button</button>
+ <br>
+ <br> -->
+
+ <!-- <div class="alert alert-danger">danger</div>
+ <div class="alert alert-success">success</div> -->
+
+ <!-- <div class="loading"></div> -->
+
+ <!-- <br>
+ <br>
+ <br>
+ <br> -->
+
+ <div class="divider"></div>
+
+ <footer class="footer">
+  <div class="footer-container">
+   <div class="social">
+    <a href="https://facebook.com">
+     <img src="/img/social-facebook.svg" alt="" />
+    </a>
+    <a href="https://instagram.com">
+     <img src="/img/social-instagram.svg" alt="" />
+    </a>
+    <a href="https://discord.com/">
+     <img src="/img/Discord-Logo-Black.svg" alt="" />
+    </a>
+    <a href="https://twitter.com">
+     <img src="/img/social-twitter.svg" alt="" />
+    </a>
+   </div>
+   <p>© 2022 Snackathon. All rights reserved.</p>
+  </div>
+ </footer>
+ <script src="index.js"></script>
+</body>
+</html>
