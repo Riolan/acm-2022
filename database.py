@@ -86,3 +86,5 @@ class UsersTB:
         cursor.execute(create_table)
         conn.commit()
         conn.close()
+
+UsersTB.user_creator()

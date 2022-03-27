@@ -10,6 +10,8 @@ from database import UsersTB
 from functools import reduce
 import operator
 
+#https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
+
 data = UsersTB.access_data().fetchall()
 data_ = []
 for x in data:

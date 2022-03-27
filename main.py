@@ -17,7 +17,6 @@ def question():
     print(session.keys())
     print()
     if 'loggedin' in session.keys():
-        x = time.time()
         print(session.keys())
         if 'questions' in session.keys():
             print("ajdajkd")
@@ -29,17 +28,19 @@ def question():
                     #GOT THE answ correct
                     #need to go to next question and update user with correct and time spent
                     print("correct")
-                    change_data(session["loggedin"], json.dumps([session['questions'][0], (time.time()-x), (1)])  )
+                    change_data(session["loggedin"], json.dumps([session['questions'][0], (time.time()-session["time"]), (1)])  )
                     session.pop("questions", None)
                     return redirect("/question")
                 else:
                     #got answ INcorrect
                     print("incorrect", session['questions'][2])
-                    change_data(session["loggedin"], json.dumps([session['questions'][0], (time.time()-x), (0)])  )
+                    change_data(session["loggedin"], json.dumps([session['questions'][0], (time.time()-session["time"]), (0)])  )
                     session.pop("questions", None)
                     return redirect("/question")
             if request.method == "GET":
                 print("get")
+                print("starting timer")
+                session["time"] = time.time()
                 return render_template('index.html', question=session['questions'], username=session['loggedin'])
         else:
             print("here")
@@ -53,7 +54,7 @@ def question():
 def change_data(username, data):
     print("start", user_.User.find_by_username(username))
     user_.User.update_data(username, data)
-    print("end", user_.User.find_by_username(username), json.loads(user_.User.find_by_username(username)[3].split(',')))
+    print("end", user_.User.find_by_username(username))
     
 
 
