@@ -47,8 +47,9 @@
    </ul>
 
    <ul class="navbar-nav-right">
-    <li><button class="btn">Sign in</button></li>
-    <li><button class="btn btn-cool">Join now</button></li>
+     <li><a class="btn btn-cool" href="/signout">Logged in as: <b>{{username}}</b></a></li>
+    <!--<li><button class="btn">Sign in</button></li>
+    <li><button class="btn btn-cool">Join now</button></li>-->
    </ul>
 
    <!-- Hamburger Menu -->
@@ -89,14 +90,13 @@
   <div class="title-underline reveal"></div>
  </div>
 
- <form class="form reveal">
+ <form class="form reveal" method="POST">
   <h2>Question</h2>
-      <p name="question">
         {% if question %}
         <h3>  {{ question }} </h3>
         {% endif %}
-      </p>
-      <form class="form-row" method="POST">
+
+      <form class="form-row">
         <div class="form_fieldset">
           <label for="answer" class="form-label">Answer: </label>
           <input type="text" name="answer" id="answer" class="form-input" />
@@ -111,27 +111,6 @@
         </div>
       </form>
  </form>
-
- <!-- <p>
-  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
- </p> -->
-
- <!-- <br>
- <button class="btn" type="button">button</button>
- <button class="btn btn-cool" type="button">cool button</button>
- <br>
- <br> -->
-
- <!-- <div class="alert alert-danger">danger</div>
- <div class="alert alert-success">success</div> -->
-
- <!-- <div class="loading"></div> -->
-
- <!-- <br>
- <br>
- <br>
- <br> -->
 
  <div class="divider"></div>
 
@@ -151,7 +130,7 @@
      <img src="{{ url_for('static', filename='/img/social-twitter.svg') }}" alt="" />
     </a>
    </div>
-   <p>© 2022 Snackathon. All rights reserved.</p>
+   <p>© 2022 Snackathon. All rights partially (for those that don't know, the headers and footers are sometimes stored in the partials) reserved.</p>
   </div>
  </footer>
 </body>
